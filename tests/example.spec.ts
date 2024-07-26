@@ -33,3 +33,10 @@ test('verify started link', async ({ page }) => {
   // Expects page to have a heading with the name of Installation.
   await expect(page.getByRole('heading', { name: 'Thông tin khoá học' })).toBeVisible();
 });
+
+test('test gitlab', async ({ page }) => {
+  await page.goto('https://dantri.com.vn/');
+
+  // Click the get started link.
+  await page.getByRole('link', { name: 'TIN MỚI NHẤT' }).click();
+});
